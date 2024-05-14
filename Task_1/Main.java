@@ -33,22 +33,6 @@ public class Main {
         
         HotDrink hotDrink = machine.findProduct(name);
         System.out.println(hotDrink.toString());
-
-        // Воспроизведение логики
-        // Product drink = machine.getProduct("coffee", 300, 70); // Предположим, что это Кофе
-        
-                // "Напиток: " + drink.getName() + ", Цена: " + drink.getPrice() + ", Температура: " + drink.getTemperature());
-
-        // HotDrinkVendingMachine machine = new HotDrinkVendingMachine();
-        // HotDrink product1 = machine.getProduct("coffee", 100, 70);
-        // HotDrink product2 = machine.getProduct("blackTea", 80, 80);
-        // HotDrink product3 = machine.getProduct("greenTea", 70, 80);
-        // HotDrink product4 = machine.getProduct("PuEr", 90, 80);
-
-        // Product drink = machine.getProduct("coffee", 300, 70); // Предположим, что это Кофе
-        // System.out.println(
-        // "Напиток: " + drink.getName() + ", Объем: " + drink.getPrice() + ", Цена: " + drink.getTemperature());
-    
     }
 }
 

@@ -4,12 +4,11 @@ public abstract class Product {
 
     private String name;
     private int price;
-    private int temperature;
+    
 
-    public Product(String name, int price, int temperature) {
+    public Product(String name, int price) {
         this.name = name;
         this.price = price;
-        this.temperature = temperature;
     }
 
     public String getName() {
@@ -28,14 +27,6 @@ public abstract class Product {
         this.price = price;
     }
 
-
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
-    }
     
 }
 
