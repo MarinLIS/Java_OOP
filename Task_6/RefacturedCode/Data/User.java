@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class User {
     private String firstName;
-    private String secondName;
-    private String patronymic;
+    private String lastName;
+    private String middleName;
     private LocalDate dateOfBirth;
 
-    public User(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
+    public User(String firstName, String lastName, String middleName, LocalDate dateOfBirth) {
         this.firstName = firstName;
-        this.secondName = secondName;
-        this.patronymic = patronymic;
+        this.lastName = lastName;
+        this.middleName = middleName;
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -23,20 +23,20 @@ public class User {
         this.firstName = firstName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getPatronymic() {
-        return patronymic;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public LocalDate getDateOfBirth() {
@@ -51,8 +51,8 @@ public class User {
     public String toString() {
         return "User{" +
                "firstName='" + firstName + '\'' +
-               ", secondName='" + secondName + '\'' +
-               ", patronymic='" + patronymic + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", middleName='" + middleName + '\'' +
                ", dateOfBirth=" + dateOfBirth +
                '}';
     }
@@ -72,12 +72,12 @@ public class User {
                 user.getFirstName() != null) {
             return false;
         }
-        if (getSecondName() != null ? !getSecondName().equals(user.getSecondName()) :
-                user.getSecondName() != null) {
+        if (getLastName() != null ? !getLastName().equals(user.getLastName()) :
+                user.getLastName() != null) {
             return false;
         }
-        if (getPatronymic() != null ? !getPatronymic().equals(user.getPatronymic()) :
-                user.getPatronymic() != null) {
+        if (getMiddleName() != null ? !getMiddleName().equals(user.getMiddleName()) :
+                user.getMiddleName() != null) {
             return false;
         }
         return getDateOfBirth() != null ? getDateOfBirth().equals(user.getDateOfBirth()) :

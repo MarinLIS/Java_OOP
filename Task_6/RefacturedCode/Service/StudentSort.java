@@ -32,7 +32,7 @@ public class StudentSort extends StudentGroupQueryService implements StudentSort
     }
 
     @Override
-    Student findStudent(String firstName, String secondName) {
+    Student findStudent(String firstName, String lastName) {
         return null;
     }
 

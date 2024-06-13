@@ -7,8 +7,8 @@ public class Teacher extends User {
 
     private Long teacherId;
 
-    public Teacher(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
-        super(firstName, secondName, patronymic, dateOfBirth);
+    public Teacher(String firstName, String lastName, String middleName, LocalDate dateOfBirth) {
+        super(firstName, lastName, middleName, dateOfBirth);
     }
 
     public Long getTeacherId() {

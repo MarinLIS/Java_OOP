@@ -19,8 +19,8 @@
         private final StudentView studentView = new StudentView();
     
         @Override
-        public void create(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
-            dataService.create(firstName, secondName, patronymic, dateOfBirth);
+        public void create(String firstName, String lastName, String middleName, LocalDate dateOfBirth) {
+            dataService.create(firstName, lastName, middleName, dateOfBirth);
             studentView.sendOnConsole(dataService.getAll());
         }
     
@@ -29,8 +29,8 @@
             studentView.sendOnConsoleUserGroup(studentGroupService.getStudentGroup());
         }
     
-        public void getStudentInStudentGroup(String firstName, String secondName){
-            Student student = studentGroupService.getStudentFromStudentGroup(firstName, secondName);
+        public void getStudentInStudentGroup(String firstName, String lastName){
+            Student student = studentGroupService.getStudentFromStudentGroup(firstName, lastName);
             studentView.sendOnConsole(Collections.singletonList(student));
         }
     

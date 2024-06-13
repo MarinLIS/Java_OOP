@@ -21,7 +21,7 @@ public class StudentGroupService {
         this.sortService = sortService;
         this.searchService = new StudentSearchService() {
             @Override
-            public Student findStudent(String firstName, String secondName) {
+            public Student findStudent(String firstName, String lastName) {
                 return null;
             }
         };
@@ -39,8 +39,8 @@ public class StudentGroupService {
     public StudentGroup getStudentGroup() {
         return studentGroup;
     }
-    public Student getStudentFromStudentGroup(String firstName, String secondName){
-        return searchService.findStudent(firstName, secondName);
+    public Student getStudentFromStudentGroup(String firstName, String lastName){
+        return searchService.findStudent(firstName, lastName);
     }
 
     public List<Student> getSortedStudentGroup() {

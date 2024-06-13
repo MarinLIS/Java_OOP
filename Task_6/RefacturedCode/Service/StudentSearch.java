@@ -14,29 +14,29 @@ public class StudentSearch extends StudentGroupQueryService{
         this.studentGroup = studentGroup;
     }
 
-    public Student getStudentFromStudentGroup(String firstName, String secondName){
+    public Student getStudentFromStudentGroup(String firstName, String lastName){
         Iterator<Student> iterator = studentGroup.iterator();
         List<Student> result = new ArrayList<>();
         while (iterator.hasNext()){
             Student student = iterator.next();
             if(student.getFirstName().equalsIgnoreCase(firstName)
-                    && student.getSecondName().equalsIgnoreCase(secondName)){
+                    && student.getLastName().equalsIgnoreCase(lastName)){
                 result.add(student);
             }
         }
         if(result.isEmpty()){
             throw new IllegalStateException(
-                    String.format("Студент с именем %s и фамилией %s не найден", firstName, secondName)
+                    String.format("Студент не найден", firstName, lastName)
             );
         }
         if(result.size() != 1){
-            throw new IllegalStateException("Найдено более одного студента с указанными именем и фамилией");
+            throw new IllegalStateException("Найдено более одного студента");
         }
         return result.get(0);
     }
 
     @Override
-    Student findStudent(String firstName, String secondName) {
+    Student findStudent(String firstName, String lastName) {
         return null;
     }
 

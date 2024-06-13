@@ -20,7 +20,7 @@ public class StudentService implements UserService<Student> {
     }
 
     @Override
-    public void create(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
+    public void create(String firstName, String lastName, String middleName, LocalDate dateOfBirth) {
         Long countMaxId = 0L;
         for (Student student: students){
             if (student.getStudentId() > countMaxId){
@@ -28,7 +28,7 @@ public class StudentService implements UserService<Student> {
             }
         }
         countMaxId++;
-        Student student = new Student(firstName, secondName, patronymic, dateOfBirth, countMaxId);
+        Student student = new Student(firstName, lastName, middleName, dateOfBirth, countMaxId);
         students.add(student);
     }
 }

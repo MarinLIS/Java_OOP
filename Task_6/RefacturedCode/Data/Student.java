@@ -5,12 +5,12 @@ import java.time.LocalDate;
 public class Student extends User implements Comparable<Student>{
     private Long studentId;
 
-    public Student(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
-        super(firstName, secondName, patronymic, dateOfBirth);
+    public Student(String firstName, String lastName, String middleName, LocalDate dateOfBirth) {
+        super(firstName, lastName, middleName, dateOfBirth);
     }
 
-    public Student(String firstName, String secondName, String patronymic, LocalDate dateOfBirth, Long studentId) {
-        super(firstName, secondName, patronymic, dateOfBirth);
+    public Student(String firstName, String lastName, String middleName, LocalDate dateOfBirth, Long studentId) {
+        super(firstName, lastName, middleName, dateOfBirth);
         this.studentId = studentId;
     }
 
@@ -27,8 +27,8 @@ public class Student extends User implements Comparable<Student>{
         return "Student{" +
                "studentId='" + studentId +'\'' +
                ", firstName='" + super.getFirstName() + '\'' +
-               ", secondName='" + super.getSecondName() + '\'' +
-               ", patronymic='" + super.getPatronymic() + '\'' +
+               ", lastName='" + super.getLastName() + '\'' +
+               ", middleName='" + super.getMiddleName() + '\'' +
                ", dateOfBirth=" + super.getDateOfBirth() +
                '}';
     }
